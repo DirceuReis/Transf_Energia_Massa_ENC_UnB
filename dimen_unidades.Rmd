@@ -1,0 +1,21 @@
+---
+title: "Dimensões e unidades"
+description: Conceitos básicos de grandezas físicas
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+```
+
+## Objetivos:
+
+ao final deste tópico, o aluno deverá ser capaz de:
+
+- Distinguir os conceitos de grandeza (quantidade), dimensão e unidade;
+- Identificar a dimensão de uma grandeza física (quantidade) e associar à unidade do Sistema Internacional;
+
+## Visão geral
+
+## Funções
+
+## Pacotes

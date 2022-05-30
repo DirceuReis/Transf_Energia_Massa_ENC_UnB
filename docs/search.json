@@ -1,0 +1,34 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "About this site",
+      "description": "Some additional details about the website",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2022-05-30T16:42:36-03:00"
+    },
+    {
+      "path": "dimen_unidades.html",
+      "title": "Dimensões e unidades",
+      "description": "Conceitos básicos de grandezas físicas",
+      "author": [],
+      "contents": "\r\n\r\nContents\r\nObjetivos:\r\nVisão geral\r\nFunções\r\nPacotes\r\n\r\nObjetivos:\r\nao final deste tópico, o aluno deverá ser capaz de:\r\nDistinguir os conceitos de grandeza (quantidade), dimensão e unidade;\r\nIdentificar a dimensão de uma grandeza física (quantidade) e associar à unidade do Sistema Internacional;\r\nVisão geral\r\nFunções\r\nPacotes\r\n\r\n\r\n\r\n",
+      "last_modified": "2022-05-30T16:42:37-03:00"
+    },
+    {
+      "path": "index.html",
+      "title": "Trasferência de Energia e Massa",
+      "description": "Departamento de Engenharia Civil e Ambiental da Universidade de Brasíla (UnB)\n",
+      "author": [
+        {
+          "name": "Dirceu S. Reis Jr.",
+          "url": "https://github.com/DirceuReis"
+        }
+      ],
+      "contents": "\r\n\r\nContents\r\nApresentação da disciplina\r\nInstrutor\r\nAmbiente Aprender3\r\nSenha da turma 1:\r\nSenha da turma 2:\r\n\r\nPlano de Aula\r\nAvaliação\r\nBibliografia sugerida\r\nLivros de Mecânica dos Fluidos\r\nLivros de Transferência de Calor e Massa\r\n\r\nCronograma preliminar\r\n\r\nApresentação da disciplina\r\nInstrutor\r\nDirceu Silveira Reis Junior (dirceu.reis@gmail.com ou dirceureis@unb.br)\r\nAmbiente Aprender3\r\nA disciplina está numa fase de transição para este site. Entretanto, as listas de exercícios continuarão a ser disponibilizadas e realizadas pelos alunos no ambiente do Aprender3. Portanto, é imprescindível que todos os alunos inscritos na disciplina, independente da turma, se inscrevam no Aprender3.\r\nSenha da turma 1:\r\na ser informada depois.\r\nSenha da turma 2:\r\nA ser informada depois.\r\nPlano de Aula\r\nO plano da disciplina (pdf) pode ser obtido no espaço reservado para a disciplina no APrender3.\r\nAvaliação\r\nA avaliação do aluno será baseada nas notas de 3 provas e de algumas listas de exercícios que serão distribuídas ao longo do semestre. A nota final do aluno será calcalada da seguinte forma,\r\n\\[\r\nNF = 0.4*MLE + 0.6*MP\r\n\\] em que MLE é a média aritmética das notas obtidas nas listas de exercícios e MP é a média ponderadas das 3 provas, dada pela equação abaixo,\r\n\\[\r\nMP = 0.3*P_1 + 0.35*P_2 + 0.35*P_3\r\n\\] em que \\(P_1, P_2, \\text{e} P_3\\) são a primeira, segunda e terceira provas, respectivamente.\r\nBibliografia sugerida\r\nLivros de Mecânica dos Fluidos\r\nTodos os livros abaixo podem ser encontrados na BCE/UnB em sua versão digital. Basta seguir o link nas referências.\r\nÇENGEL, Yunus A.; CIMBALA, John M. Mecânica dos fluidos. [Digite o Local da Editora]: Grupo A, 2015. 9788580554915. Disponível em: https://integrada.minhabiblioteca.com.br/#/books/9788580554915/. Acesso em: 30 mai. 2022.\r\nPOTTER, Merle C.; WIGGERT, David C. Mecânica dos Fluidos. [Digite o Local da Editora]: Grupo A, 2018. 9788582604540. Disponível em: https://integrada.minhabiblioteca.com.br/#/books/9788582604540/. Acesso em: 30 mai. 2022.\r\nWHITE, Frank M. Mecânica dos Fluidos. [Digite o Local da Editora]: Grupo A, 2018. 9788580556070. Disponível em: https://integrada.minhabiblioteca.com.br/#/books/9788580556070/. Acesso em: 30 mai. 2022.\r\nFOX, Robert W.; MCDONALD, Alan T.; PRITCHARD, Philip J.; MICHTELL, John W. Introdução à Mecânica dos Fluidos, 9ª edição. [Digite o Local da Editora]: Grupo GEN, 2018. 9788521635000. Disponível em: https://integrada.minhabiblioteca.com.br/#/books/9788521635000/. Acesso em: 30 mai. 2022.\r\nMUNSON, Bruce R. Fundamentos da mecânica dos fluídos. [Digite o Local da Editora]: Editora Blucher, 2004. 9788521215493. Disponível em: https://integrada.minhabiblioteca.com.br/#/books/9788521215493/. Acesso em: 30 mai. 2022.\r\nLivros de Transferência de Calor e Massa\r\nÇENGEL, Yunus A.; GHAJAR, Afshin J. Transferência de calor e massa: uma abordagem prática. [Digite o Local da Editora]: Grupo A, 2009. 9788580551280. Disponível em: https://integrada.minhabiblioteca.com.br/#/books/9788580551280/. Acesso em: 30 mai. 2022.\r\nCronograma preliminar\r\n\r\n\r\n\r\n",
+      "last_modified": "2022-05-30T16:42:38-03:00"
+    }
+  ],
+  "collections": []
+}

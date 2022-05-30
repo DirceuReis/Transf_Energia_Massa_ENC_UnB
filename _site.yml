@@ -1,0 +1,65 @@
+name: "Transf_Energia_Massa_ENC_UnB"
+title: "Transferência de Energia e Massa"
+description: |
+  Disciplina dos cursos de Engenharia Civil e Engenharia Ambiental da Universidade de Brasília
+output_dir: "docs"
+navbar:
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "Parte 1"
+      menu:
+        - text: "Dimensão e unidades"
+          href: dimen_unidades.html
+        - text: "Propiedades dos fluidos"
+          href: propriedades.html
+        - text: "Pressão e manometria"
+          href: pressao_manometria.html
+        - text: "Forças: superfícies planas"
+          href: forca_planas.html
+        - text: "Forças: superfícies curvas"
+          href: forcas_curvas.html
+        - text: "Empuxo"
+          href: empuxo.html  
+    - text: "Parte 2"
+      menu:
+        - text: "Descrições Euleriana e Lagrangeana"
+          href: Euler_Lagrange.html
+        - text: "Teorema do transporte de Reynolds"
+          href: TTR.html
+        - text: "Conservação de massa"
+          href: conserv_massa.html
+        - text: "Conservação de momentum"
+          href: conserv_momentum.html
+        - text: "Bernoulli"
+          href: bernoulli.html  
+        - text: "Conservação de energia"
+          href: conserv_energia.html  
+    - text: "Parte 3"
+      menu:
+        - text: "Análise dimensional"
+          href: analise_dimensional.html
+        - text: "Escoamento em tubo: laminar"
+          href: tubo_laminar.html
+        - text: "Escoamento em tubo: turbulento"
+          href: tubo_turbulento.html
+        - text: "Perda de carga em tubo"
+          href: perda_carga.html
+        - text: "Condutos em série e paralelo"
+          href: cond_serie_paralelo.html  
+        - text: "Máquinas de fluxo"
+          href: maquinas_fluxo.html
+        - text: "Bombas e sistema"
+          href: bombas_sistema.html
+        - text: "Bombas em série e paralelo"
+          href: bombas_serie_paralelo.html  
+    - text: "Parte 4"
+      menu:
+        - text: "Transporte de massa"
+          href: transporte_massa.html
+        - text: "Transferência de calor"
+          href: transf_calor.html
+output:
+  distill::distill_article:
+    toc: true
+

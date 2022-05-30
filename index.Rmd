@@ -1,0 +1,96 @@
+---
+title: "Trasferência de Energia e Massa"
+description: |
+  Departamento de Engenharia Civil e Ambiental da Universidade de Brasíla (UnB)
+author:
+  - name: "Dirceu S. Reis Jr."
+    url: https://github.com/DirceuReis
+    affiliation: Professor Universidade de Brasília (UnB) 
+    affiliation_url: https://www.unb.br
+    orcid_id: 0000-0003-1787-9763  
+output:
+  distill::distill_article:
+    toc: true
+site: distill::distill_website
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+# Learn more about creating websites with Distill at:
+# https://rstudio.github.io/distill/website.html
+
+# Learn more about publishing to GitHub Pages at:
+# https://rstudio.github.io/distill/publish_website.html#github-pages
+
+```
+
+## Apresentação da disciplina
+
+A disciplina de Transferência de Energia e Massa (5 créditos), código 115762, é obrigatória para os cursos de Engenharia Civil e Engenharia Ambiental da Universidade de Brasília, sendo ofertada todo o semestre, sempre com duas turmas. 
+
+A turma 1 tem aulas às segundas das 18h00 às 18h50 e nas terças e quintas das 16h00 às 17h50.
+
+A turma 2 tem aulas às segundas e quartas das 16h00 às 17h50 e nas terças das 18h00 às 18h50.
+
+
+## Professor
+
+Dirceu Silveira Reis Junior (dirceu.reis@gmail.com ou dirceureis@unb.br)
+
+## Ambiente Aprender3
+
+A disciplina está numa fase de transição para este site. Entretanto, as listas de exercícios continuarão a ser disponibilizadas e realizadas pelos alunos no ambiente do Aprender3. Portanto, é imprescindível que todos os alunos inscritos na disciplina, independente da turma, se inscrevam no Aprender3.
+
+### Senha da turma 1:
+
+a ser informada depois.
+
+### Senha da turma 2:
+
+A ser informada depois.
+
+## Plano de Aula
+
+O plano da disciplina (pdf) pode ser obtido no espaço reservado para a disciplina no APrender3.
+
+## Avaliação
+
+A avaliação do aluno será baseada nas notas de 3 provas e de algumas listas de exercícios que serão distribuídas ao longo do semestre. A nota final do aluno será calcalada da seguinte forma,
+
+$$
+NF = 0.4*MLE + 0.6*MP
+$$
+em que MLE é a média aritmética das notas obtidas nas listas de exercícios e MP é a média ponderadas das 3 provas, dada pela equação abaixo,
+
+$$
+MP = 0.3*P_1 + 0.35*P_2 + 0.35*P_3
+$$
+em que $P_1, P_2, \text{e} P_3$ são a primeira, segunda e terceira provas, respectivamente.
+
+## Bibliografia sugerida
+
+### Livros de Mecânica dos Fluidos
+
+Todos os livros abaixo podem ser encontrados na BCE/UnB em sua versão digital. Basta seguir o link nas referências.
+
+- ÇENGEL, Yunus A.; CIMBALA, John M. Mecânica dos fluidos. [Digite o Local da Editora]: Grupo A, 2015. 9788580554915. Disponível em: https://integrada.minhabiblioteca.com.br/#/books/9788580554915/. Acesso em: 30 mai. 2022.
+
+- POTTER, Merle C.; WIGGERT, David C. Mecânica dos Fluidos. [Digite o Local da Editora]: Grupo A, 2018. 9788582604540. Disponível em: https://integrada.minhabiblioteca.com.br/#/books/9788582604540/. Acesso em: 30 mai. 2022.
+
+- WHITE, Frank M. Mecânica dos Fluidos. [Digite o Local da Editora]: Grupo A, 2018. 9788580556070. Disponível em: https://integrada.minhabiblioteca.com.br/#/books/9788580556070/. Acesso em: 30 mai. 2022.
+
+- FOX, Robert W.; MCDONALD, Alan T.; PRITCHARD, Philip J.; MICHTELL, John W. Introdução à Mecânica dos Fluidos, 9ª edição. [Digite o Local da Editora]: Grupo GEN, 2018. 9788521635000. Disponível em: https://integrada.minhabiblioteca.com.br/#/books/9788521635000/. Acesso em: 30 mai. 2022.
+
+- MUNSON, Bruce R. Fundamentos da mecânica dos fluídos. [Digite o Local da Editora]: Editora Blucher, 2004. 9788521215493. Disponível em: https://integrada.minhabiblioteca.com.br/#/books/9788521215493/. Acesso em: 30 mai. 2022.
+
+<!-- POST, Scott. Mecânica dos Fluidos Aplicada e Computacional. [Digite o Local da Editora]: Grupo GEN, 2013. 9788521635263. Disponível em: https://integrada.minhabiblioteca.com.br/#/books/9788521635263/. Acesso em: 30 mai. 2022. -->
+
+<!-- ELGER, Donald F. Mecânica dos Fluidos para Engenharia, 11ª edição. [Digite o Local da Editora]: Grupo GEN, #2019. 9788521636168. Disponível em: https://integrada.minhabiblioteca.com.br/#/books/9788521636168/. Acesso em: 30 mai. 2022.-->
+
+### Livros de Transferência de Calor e Massa
+
+- ÇENGEL, Yunus A.; GHAJAR, Afshin J. Transferência de calor e massa: uma abordagem prática. [Digite o Local da Editora]: Grupo A, 2009. 9788580551280. Disponível em: https://integrada.minhabiblioteca.com.br/#/books/9788580551280/. Acesso em: 30 mai. 2022.
+
+## Cronograma preliminar
