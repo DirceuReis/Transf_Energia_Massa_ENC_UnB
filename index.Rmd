@@ -37,7 +37,16 @@ A turma 2 tem aulas às segundas e quartas das 16h00 às 17h50 e nas terças das
 
 ## Professor
 
-Dirceu Silveira Reis Junior (dirceu.reis@gmail.com ou dirceureis@unb.br)
+Dirceu Silveira Reis Junior
+
+![Dirceu S. Reis Jr.](foto_lago_menor.jpg){width=30%} 
+
+email: dirceu.reis@gmail.com ou dirceureis@unb.br
+
+<aside>
+Here is a small side note.
+</aside>
+
 
 ## Ambiente Aprender3
 
