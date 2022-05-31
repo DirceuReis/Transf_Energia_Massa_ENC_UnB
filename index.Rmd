@@ -40,30 +40,23 @@ A turma 2 tem aulas às segundas e quartas das 16h00 às 17h50 e nas terças das
 
 Dirceu Silveira Reis Junior
 
-![Dirceu S. Reis Jr.](foto_lago_menor.jpg){width=30%} 
-
 email: dirceu.reis@gmail.com ou dirceureis@unb.br
 
-<aside>
-Here is a small side note.
-</aside>
-
+![Dirceu S. Reis Jr. curtindo o lago Paranoá na pandemia](foto_lago_menor.jpg){width=30%} 
 
 ## Aprender3
 
 A disciplina está numa fase de transição para este site. Entretanto, as listas de exercícios continuarão a ser disponibilizadas e realizadas pelos alunos no ambiente do Aprender3. Portanto, é imprescindível que todos os alunos inscritos na disciplina, independente da turma, se inscrevam no Aprender3.
 
-### Senha da turma 1:
+As senhas para inscrição serão disponibilizadas no primeiro dia de aula.
 
-a ser informada depois.
+## Plano da disciplina
 
-### Senha da turma 2:
+Os planos da disciplina (pdf) com todos os detalhes que costuma ser apresentados, e que não estão listado aqui neste site,podem ser obtidos pelos links abaixo:
 
-A ser informada depois.
-
-## Plano de Aula
-
-O plano da disciplina (pdf) pode ser obtido nos links a seguir: [Turma 01](Apresentacao1-2022_1_Transf_Energia_Mass_Turma_A.pdf) e [Turma 02](Apresentacao1-2022_1_Transf_Energia_Mass_Turma_A.pdf) ou no espaço reservado para a disciplina no APrender3.
+- [Turma 01](Apresentacao1-2022_1_Transf_Energia_Mass_Turma_A.pdf)
+- [Turma 02](Apresentacao1-2022_1_Transf_Energia_Mass_Turma_B.pdf)
+- ou diretamente no espaço reservado para a disciplina no Aprender3.
 
 ## Avaliação
 
