@@ -60,7 +60,7 @@ navbar:
         - text: "Transferência de calor"
           href: transf_calor.html
     - text: "Blog"
-      href: postagens_index.html
+      href: blog.html
 output:
   distill::distill_article:
     toc: true
