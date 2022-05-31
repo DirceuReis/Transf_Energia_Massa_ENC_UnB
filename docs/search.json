@@ -6,14 +6,14 @@
       "description": "Some additional details about the website",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2022-05-31T17:00:43-03:00"
+      "last_modified": "2022-05-31T17:59:10-03:00"
     },
     {
       "path": "blog.html",
       "title": "Transferência de Energia e Massa (UnB)",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2022-05-31T17:00:44-03:00"
+      "last_modified": "2022-05-31T17:59:11-03:00"
     },
     {
       "path": "dimen_unidades.html",
@@ -21,7 +21,7 @@
       "description": "Conceitos básicos de grandezas físicas",
       "author": [],
       "contents": "\r\n\r\nContents\r\nObjetivos:\r\nLeitura\r\n\r\nObjetivos:\r\nAo final deste tópico, o aluno deverá ser capaz de:\r\nDistinguir os conceitos de grandeza física (quantidade), dimensão e unidade;\r\nIdentificar a dimensão de uma grandeza física (quantidade) e associar à unidade do Sistema Internacional;\r\nCompreender se uma equação é dimensionalmente homogênea.\r\nLeitura\r\nOs alunos deverão ler pelo menos um dos textos elencados na seção Bibligrafia Sugerida na página inicial deste site.\r\nDurante a leitura, procure entender os conceitos de grandeza, dimensão e unidade. Em seguida, procure elaborar uma lista de variáveis físicas que você já aprendeu no passado e tente identificar a dimensão dessas variáveis e as respectivas unidades no Sistema Internacional.\r\n\r\n\r\n\r\n",
-      "last_modified": "2022-05-31T17:00:45-03:00"
+      "last_modified": "2022-05-31T17:59:12-03:00"
     },
     {
       "path": "forca_planas.html",
@@ -29,7 +29,7 @@
       "description": "Fluido em contato com superfícies planas",
       "author": [],
       "contents": "\r\n\r\nContents\r\nObjetivos:\r\nLeitura\r\nTópicos a serem abordados:\r\n\r\nObjetivos:\r\nAo final deste tópico, o aluno deverá ser capaz de estimar a força resultante exercida por um fluido, e seu ponto de aplicação, empregando os seguintes métodos:\r\nIntegração das pressões ao longo da área de superfície da estrutura em contato com o fluido;\r\nCom base no fato de que a força resultante é o produto da pressão na profundidade do centróide da estrutura sob ação do fluido e a área de contato;\r\nCom base no volume do prisma de pressões\r\nLeitura\r\nOs alunos deverão ler pelo menos um dos textos elencados na seção Bibligrafia Sugerida na página inicial deste site.\r\nTópicos a serem abordados:\r\nCálculo do módulo da força resultante (\\(F_R\\))\r\nConceito de diagrama de pressão;\r\nConceito de força resultante devido à pressão do fluido exercida numa área infinitesimal \\(dA\\) da estrutura de interesse;\r\nEstimativa da força resultante total (\\(F_R\\)) via integração da força infinitesimal \\(dF\\) em toda a área da estrutura em contato com o fluido;\r\nDemonstração de que o módulo de \\(F_R\\) é igual ao produto entre a pressão do fluido na profundidade do centróide da estrutura em contato com o fluido e sua respectiva áreas;\r\nConceito de prisma de pressão;\r\nDemonstração de que o módulo de \\(F_R\\) é igual ao volume do prisma de pressão;\r\nDeterminação do ponto de aplicação de \\(F_R\\)\r\nVia integração numérica\r\nConceito de momento (\\(dM\\)) causado pela força infinitesimal \\(dF\\);\r\nDetermianação do momento total (\\(M\\)) via integração de \\(dM\\) sobre a área da estrtura de interesse;\r\nCálculo do ponto de aplicação de \\(F_R\\) com base no valor de \\(M\\)\r\n\r\nVia diagrama de pressão\r\n\r\n\r\n\r\n",
-      "last_modified": "2022-05-31T17:00:45-03:00"
+      "last_modified": "2022-05-31T17:59:13-03:00"
     },
     {
       "path": "index.html",
@@ -42,7 +42,7 @@
         }
       ],
       "contents": "\r\n\r\nContents\r\nApresentação\r\nProfessor\r\nAprender3\r\nPlano da disciplina\r\nAvaliação\r\nBibliografia\r\nCronograma\r\n\r\nApresentação\r\nA disciplina de Transferência de Energia e Massa (5 créditos), código 115762, é obrigatória para os cursos de Engenharia Civil e Engenharia Ambiental da Universidade de Brasília, sendo ofertada todo o semestre, sempre com duas turmas.\r\nA turma 1 tem aulas às segundas das 18h00 às 18h50 e nas terças e quintas das 16h00 às 17h50.\r\nA turma 2 tem aulas às segundas e quartas das 16h00 às 17h50 e nas terças das 18h00 às 18h50.\r\nProfessor\r\nDirceu Silveira Reis Junior\r\nemail: dirceu.reis@gmail.com ou dirceureis@unb.br\r\nDirceu S. Reis Jr. curtindo o lago Paranoá na pandemiaAprender3\r\nA disciplina está numa fase de transição para este site. Entretanto, as listas de exercícios continuarão a ser disponibilizadas e realizadas pelos alunos no ambiente do Aprender3. Portanto, é imprescindível que todos os alunos inscritos na disciplina, independente da turma, se inscrevam no Aprender3.\r\nAs senhas para inscrição serão disponibilizadas no primeiro dia de aula.\r\nPlano da disciplina\r\nOs planos da disciplina (pdf) com todos os detalhes que costuma ser apresentados, e que não estão listado aqui neste site,podem ser obtidos pelos links abaixo:\r\nTurma 01\r\nTurma 02\r\nou diretamente no espaço reservado para a disciplina no Aprender3.\r\nAvaliação\r\nA avaliação do aluno será baseada nas notas de 3 provas e de algumas listas de exercícios que serão distribuídas ao longo do semestre. A nota final do aluno será calcalada da seguinte forma,\r\n\\[\r\nNF = 0.4*MLE + 0.6*MP\r\n\\] em que MLE é a média aritmética das notas obtidas nas listas de exercícios e MP é a média ponderadas das 3 provas, dada pela equação abaixo,\r\n\\[\r\nMP = 0.3*P_1 + 0.35*P_2 + 0.35*P_3\r\n\\] em que \\(P_1, P_2, \\text{e} P_3\\) são a primeira, segunda e terceira provas, respectivamente.\r\nBibliografia\r\nLivros de Mecânica dos Fluidos\r\nTodos os livros abaixo podem ser encontrados na BCE/UnB em sua versão digital. Basta seguir o link nas referências.\r\nÇENGEL, Yunus A.; CIMBALA, John M. Mecânica dos fluidos. [Digite o Local da Editora]: Grupo A, 2015. 9788580554915. Disponível em: https://integrada.minhabiblioteca.com.br/#/books/9788580554915/. Acesso em: 30 mai. 2022.\r\nPOTTER, Merle C.; WIGGERT, David C. Mecânica dos Fluidos. [Digite o Local da Editora]: Grupo A, 2018. 9788582604540. Disponível em: https://integrada.minhabiblioteca.com.br/#/books/9788582604540/. Acesso em: 30 mai. 2022.\r\nWHITE, Frank M. Mecânica dos Fluidos. [Digite o Local da Editora]: Grupo A, 2018. 9788580556070. Disponível em: https://integrada.minhabiblioteca.com.br/#/books/9788580556070/. Acesso em: 30 mai. 2022.\r\nFOX, Robert W.; MCDONALD, Alan T.; PRITCHARD, Philip J.; MICHTELL, John W. Introdução à Mecânica dos Fluidos, 9ª edição. [Digite o Local da Editora]: Grupo GEN, 2018. 9788521635000. Disponível em: https://integrada.minhabiblioteca.com.br/#/books/9788521635000/. Acesso em: 30 mai. 2022.\r\nMUNSON, Bruce R. Fundamentos da mecânica dos fluídos. [Digite o Local da Editora]: Editora Blucher, 2004. 9788521215493. Disponível em: https://integrada.minhabiblioteca.com.br/#/books/9788521215493/. Acesso em: 30 mai. 2022.\r\nLivros de Transferência de Calor e Massa\r\nÇENGEL, Yunus A.; GHAJAR, Afshin J. Transferência de calor e massa: uma abordagem prática. [Digite o Local da Editora]: Grupo A, 2009. 9788580551280. Disponível em: https://integrada.minhabiblioteca.com.br/#/books/9788580551280/. Acesso em: 30 mai. 2022.\r\nCronograma\r\n\r\n\r\n\r\n",
-      "last_modified": "2022-05-31T17:00:46-03:00"
+      "last_modified": "2022-05-31T17:59:14-03:00"
     },
     {
       "path": "pressao_manometria.html",
@@ -50,7 +50,7 @@
       "description": "Como a pressão varia no espaço num fluido em repouso e como medimos seu valor.",
       "author": [],
       "contents": "\r\n\r\nContents\r\nObjetivos:\r\nLeitura\r\nTópicos a serem abordados\r\n\r\nObjetivos:\r\nAo final deste tópico, o aluno deverá ser capaz de:\r\nExplicar se a pressão é uma grandeza escalar ou vetorial;\r\nQuantificar as variações de pressão com a profundidade de um fluido em repouso;\r\nEntender o princípio físico de um manômetro;\r\nCalcular a pressão por meio da leitura de um manômetro de um ou de vários fluidos.\r\nLeitura\r\nOs alunos deverão ler pelo menos um dos textos elencados na seção Bibliografia Sugerida na página inicial deste site.\r\nTópicos a serem abordados\r\nO que é pressão de um fluido\r\nComo a pressão varia no espaço num fuido em repouso\r\nFuncionamento de um manômetro\r\n\r\n\r\n\r\n",
-      "last_modified": "2022-05-31T17:00:47-03:00"
+      "last_modified": "2022-05-31T17:59:14-03:00"
     },
     {
       "path": "propriedades.html",
@@ -58,7 +58,7 @@
       "description": "Conceitos introdutórios sobre o comportamento dos fluidos",
       "author": [],
       "contents": "\r\n\r\nContents\r\nObjetivos:\r\nLeitura\r\nVídeo-aula sobre viscosidade\r\n\r\nObjetivos:\r\nAo final deste tópico, o aluno deverá ser capaz de:\r\nEntender as diferenças entre gases, líquidos e sólidos;\r\nSaber explicar as propriedades de um fluido, tais como massa específica, peso específico, densidade relativa, viscosidade dinâmica, tensão superficial, e tensão de vapor;\r\nAplicar os conceitos de viscosidade e tensão superficial em situações práticas na engenharia;\r\nIdentificar problemas práticos nas áreas de engenharia civil e ambiental relacionados com fluidos.\r\nLeitura\r\nOs alunos deverão ler pelo menos um dos textos elencados na seção Bibligrafia Sugerida na página inicial deste site.\r\nEm seguida, procure entender o que difere um sólido de um fluido. Reflita sobre essas diferenças. Quais são as principias características que levam um sólido a se comportar de maneira diferente de um fluido? E por que líquidos e gases, ambos fluidos, se comportam também de maneira diferente?\r\nPor último, leia sobre as diversas propriedades de um fluido, focando principalmente, mas não apenas, na viscosidade, tensão superficial, e tensão de vapor.\r\nVídeo-aula sobre viscosidade\r\nEste vídeo curto apresenta a relação entre a viscosidade de um fluido e sua taxa de deformação.\r\n\r\n\r\n\r\n",
-      "last_modified": "2022-05-31T17:00:48-03:00"
+      "last_modified": "2022-05-31T17:59:15-03:00"
     }
   ],
   "collections": ["posts/posts.json"]
