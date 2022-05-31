@@ -1,0 +1,30 @@
+---
+title: "Propriedades dos fluidos"
+description: Conceitos introdutórios sobre o comportamento dos fluidos 
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+```
+
+## Objetivos:
+
+Ao final deste tópico, o aluno deverá ser capaz de:
+
+- Entender as diferenças entre gases, líquidos e sólidos;
+- Saber explicar as propriedades de um fluido, tais como massa específica, peso específico, densidade relativa, viscosidade dinâmica, tensão superficial, e tensão de vapor;
+- Aplicar os conceitos de viscosidade e tensão superficial em situações práticas na engenharia;
+- Identificar problemas práticos nas áreas de engenharia civil e ambiental relacionados com fluidos.
+
+## Leitura
+
+Os alunos deverão ler pelo menos um dos textos elencados na seção Bibligrafia Sugerida na página inicial deste site. 
+
+Em seguida, procure entender o que difere um sólido de um fluido. Reflita sobre essas diferenças. Quais são as principias características que levam um sólido a se comportar de maneira diferente de um fluido? E por que líquidos e gases, ambos fluidos, se comportam também de maneira diferente? 
+
+Por último, leia sobre as diversas propriedades de um fluido, focando principalmente, mas não apenas, na viscosidade, tensão superficial, e tensão de vapor. 
+
+## Vídeo-aula sobre viscosidade
+
+[Este vídeo curto](https://web.microsoftstream.com/video/e8ae3e86-dead-44e8-9bf0-2e79f8874301) apresenta a relação entre a viscosidade de um fluido e sua taxa de deformação.
+

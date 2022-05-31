@@ -1,0 +1,44 @@
+---
+title: "Esforços em estruturas de engenharia"
+description: Fluido em contato com superfícies planas
+output:
+  distill::distill_article:
+    toc: true
+    toc_depth: 2
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+```
+
+## Objetivos:
+
+Ao final deste tópico, o aluno deverá ser capaz de estimar a força resultante exercida por um fluido, e seu ponto de aplicação, empregando os seguintes métodos:
+
+
+- Integração das pressões ao longo da área de superfície da estrutura em contato com o fluido;
+- Com base no fato de que a força resultante é o produto da pressão na profundidade do centróide da estrutura sob ação do fluido e a área de contato; 
+- Com base no volume do prisma de pressões
+
+## Leitura
+
+Os alunos deverão ler pelo menos um dos textos elencados na seção Bibligrafia Sugerida na página inicial deste site. 
+
+## Tópicos a serem abordados:
+
+### Cálculo do módulo da força resultante ($F_R$)
+
+- Conceito de diagrama de pressão;
+- Conceito de força resultante devido à pressão do fluido exercida numa área infinitesimal $dA$ da estrutura de interesse;
+- Estimativa da força resultante total ($F_R$) via integração da força infinitesimal $dF$ em toda a área da estrutura em contato com o fluido;
+- Demonstração de que o módulo de $F_R$ é igual ao produto entre a pressão do fluido na profundidade do centróide da estrutura em contato com o fluido e sua respectiva áreas;
+- Conceito de prisma de pressão;
+- Demonstração de que o módulo de $F_R$ é igual ao volume do prisma de pressão;
+
+### Determinação do ponto de aplicação de $F_R$
+
+- Via integração numérica
+  - Conceito de momento ($dM$) causado pela força infinitesimal $dF$;
+  - Determianação do momento total ($M$) via integração de $dM$ sobre a área da estrtura de interesse;
+  - Cálculo do ponto de aplicação de $F_R$ com base no valor de $M$
+- Via diagrama de pressão

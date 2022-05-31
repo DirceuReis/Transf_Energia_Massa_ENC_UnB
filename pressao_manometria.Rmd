@@ -1,0 +1,31 @@
+---
+title: "Pressão e manometria"
+description: Como a pressão varia no espaço num fluido em repouso e como medimos seu valor.
+---
+
+
+```{r setup, include=FALSE}
+library(knitr)
+```
+
+## Objetivos: 
+
+Ao final deste tópico, o aluno deverá ser capaz de:
+
+- Explicar se a pressão é uma grandeza escalar ou vetorial;
+- Quantificar as variações de pressão com a profundidade de um fluido em repouso;
+- Entender o princípio físico de um manômetro;
+- Calcular a pressão por meio da leitura de um manômetro de um ou de vários fluidos.
+
+## Leitura
+
+Os alunos deverão ler pelo menos um dos textos elencados na seção Bibliografia Sugerida na página inicial deste site. 
+
+## Tópicos a serem abordados
+
+- O que é pressão de um fluido
+
+- Como a pressão varia no espaço num fuido em repouso
+
+- Funcionmento de um manômetro
+

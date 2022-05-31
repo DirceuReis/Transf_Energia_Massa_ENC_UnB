@@ -9,13 +9,14 @@ library(knitr)
 
 ## Objetivos:
 
-ao final deste tópico, o aluno deverá ser capaz de:
+Ao final deste tópico, o aluno deverá ser capaz de:
 
-- Distinguir os conceitos de grandeza (quantidade), dimensão e unidade;
+- Distinguir os conceitos de grandeza física (quantidade), dimensão e unidade;
 - Identificar a dimensão de uma grandeza física (quantidade) e associar à unidade do Sistema Internacional;
+- Compreender se uma equação é dimensionalmente homogênea.
 
-## Visão geral
+## Leitura
 
-## Funções
+Os alunos deverão ler pelo menos um dos textos elencados na seção Bibligrafia Sugerida na página inicial deste site. 
 
-## Pacotes
+Durante a leitura, procure entender os conceitos de grandeza, dimensão e unidade. Em seguida, procure elaborar uma lista de variáveis físicas que você já aprendeu no passado e tente identificar a dimensão dessas variáveis e as respectivas unidades no Sistema Internacional. 
