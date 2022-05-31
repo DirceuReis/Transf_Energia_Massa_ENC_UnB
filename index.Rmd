@@ -11,6 +11,7 @@ author:
 output:
   distill::distill_article:
     toc: true
+    toc_depth: 2
 site: distill::distill_website
 
 ---
@@ -26,7 +27,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ```
 
-## Apresentação da disciplina
+## Apresentação
 
 A disciplina de Transferência de Energia e Massa (5 créditos), código 115762, é obrigatória para os cursos de Engenharia Civil e Engenharia Ambiental da Universidade de Brasília, sendo ofertada todo o semestre, sempre com duas turmas. 
 
@@ -48,7 +49,7 @@ Here is a small side note.
 </aside>
 
 
-## Ambiente Aprender3
+## Aprender3
 
 A disciplina está numa fase de transição para este site. Entretanto, as listas de exercícios continuarão a ser disponibilizadas e realizadas pelos alunos no ambiente do Aprender3. Portanto, é imprescindível que todos os alunos inscritos na disciplina, independente da turma, se inscrevam no Aprender3.
 
@@ -62,7 +63,7 @@ A ser informada depois.
 
 ## Plano de Aula
 
-O plano da disciplina (pdf) pode ser obtido no espaço reservado para a disciplina no APrender3.
+O plano da disciplina (pdf) pode ser obtido nos links a seguir: [Turma 01](Apresentacao1-2022_1_Transf_Energia_Mass_Turma_A.pdf) e [Turma 02](Apresentacao1-2022_1_Transf_Energia_Mass_Turma_A.pdf) ou no espaço reservado para a disciplina no APrender3.
 
 ## Avaliação
 
@@ -78,7 +79,7 @@ MP = 0.3*P_1 + 0.35*P_2 + 0.35*P_3
 $$
 em que $P_1, P_2, \text{e} P_3$ são a primeira, segunda e terceira provas, respectivamente.
 
-## Bibliografia sugerida
+## Bibliografia
 
 ### Livros de Mecânica dos Fluidos
 
@@ -102,4 +103,4 @@ Todos os livros abaixo podem ser encontrados na BCE/UnB em sua versão digital. 
 
 - ÇENGEL, Yunus A.; GHAJAR, Afshin J. Transferência de calor e massa: uma abordagem prática. [Digite o Local da Editora]: Grupo A, 2009. 9788580551280. Disponível em: https://integrada.minhabiblioteca.com.br/#/books/9788580551280/. Acesso em: 30 mai. 2022.
 
-## Cronograma preliminar
+## Cronograma
