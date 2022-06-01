@@ -31,9 +31,18 @@ knitr::opts_chunk$set(echo = FALSE)
 
 A disciplina de Transferência de Energia e Massa (5 créditos), código 115762, é obrigatória para os cursos de Engenharia Civil e Engenharia Ambiental da Universidade de Brasília, sendo ofertada todo o semestre, sempre com duas turmas. 
 
-A turma 1 tem aulas às segundas das 18h00 às 18h50 e nas terças e quintas das 16h00 às 17h50.
+Os pré-requisitos para cursar a disciplina são:
 
-A turma 2 tem aulas às segundas e quartas das 16h00 às 17h50 e nas terças das 18h00 às 18h50.
+- MAT-113051 Cálculo 3 e ENC-166014 Mecânica dos Sólidos 1 ou
+
+- MAT-113051 Cálculo 3 e ENC 110302: Intro à Mecânica dos Sólidos 
+
+
+As aulas acontecerão na sala FT/ENC/CT-43/15 nos horários apresentados abaixo,
+
+- Turma 1: segundas das 18h00 às 18h50 e terças e quintas das 16h00 às 17h50.
+
+- Turma 2: segundas e quartas das 16h00 às 17h50 e terças das 18h00 às 18h50.
 
 
 ## Professor
@@ -44,15 +53,9 @@ email: dirceu.reis@gmail.com ou dirceureis@unb.br
 
 ![Dirceu S. Reis Jr. curtindo o lago Paranoá na pandemia](foto_lago_menor.jpg){width=30%} 
 
-## Aprender3
-
-A disciplina está numa fase de transição para este site. Entretanto, as listas de exercícios continuarão a ser disponibilizadas e realizadas pelos alunos no ambiente do Aprender3. Portanto, é imprescindível que todos os alunos inscritos na disciplina, independente da turma, se inscrevam no Aprender3.
-
-As senhas para inscrição serão disponibilizadas no primeiro dia de aula.
-
 ## Plano da disciplina
 
-Os planos da disciplina (pdf) com todos os detalhes que costuma ser apresentados, e que não estão listado aqui neste site,podem ser obtidos pelos links abaixo:
+Os planos da disciplina (pdf), um para cada turma, com todos os detalhes que costumam ser apresentados, e que não estão listados aqui neste site, podem ser obtidos pelos links abaixo:
 
 - [Turma 01](Apresentacao1-2022_1_Transf_Energia_Mass_Turma_A.pdf)
 - [Turma 02](Apresentacao1-2022_1_Transf_Energia_Mass_Turma_B.pdf)
@@ -60,23 +63,23 @@ Os planos da disciplina (pdf) com todos os detalhes que costuma ser apresentados
 
 ## Avaliação
 
-A avaliação do aluno será baseada nas notas de 3 provas e de algumas listas de exercícios que serão distribuídas ao longo do semestre. A nota final do aluno será calcalada da seguinte forma,
+A avaliação do aluno será baseada nas notas de 3 provas, a serem realizadas em sala de aula, e de algumas listas de exercícios que serão distribuídas ao longo do semestre. A nota final do aluno será calcalada da seguinte forma,
 
 $$
 NF = 0.4*MLE + 0.6*MP
 $$
-em que MLE é a média aritmética das notas obtidas nas listas de exercícios e MP é a média ponderadas das 3 provas, dada pela equação abaixo,
+em que $NF$ é a nota final do aluno, $MLE$ é a média aritmética das notas obtidas nas listas de exercícios, e $MP$ é a média ponderadas das 3 provas, dada pela equação abaixo,
 
 $$
 MP = 0.3*P_1 + 0.35*P_2 + 0.35*P_3
 $$
-em que $P_1, P_2, \text{e} P_3$ são a primeira, segunda e terceira provas, respectivamente.
+em que $P_1, P_2, \text{e}\; P_3$ são a primeira, segunda e terceira provas, respectivamente.
 
 ## Bibliografia
 
 ### Livros de Mecânica dos Fluidos
 
-Todos os livros abaixo podem ser encontrados na BCE/UnB em sua versão digital. Basta seguir o link nas referências.
+Todos os livros abaixo podem ser encontrados na BCE/UnB em sua versão digital. Basta seguir o link nas referências. Todos estes livros são muito bons. Recomendo a leitura dos capítulos de qualquer um destes livros à medida que formos avançando no tempo. 
 
 - ÇENGEL, Yunus A.; CIMBALA, John M. Mecânica dos fluidos. [Digite o Local da Editora]: Grupo A, 2015. 9788580554915. Disponível em: https://integrada.minhabiblioteca.com.br/#/books/9788580554915/. Acesso em: 30 mai. 2022.
 
@@ -97,3 +100,18 @@ Todos os livros abaixo podem ser encontrados na BCE/UnB em sua versão digital. 
 - ÇENGEL, Yunus A.; GHAJAR, Afshin J. Transferência de calor e massa: uma abordagem prática. [Digite o Local da Editora]: Grupo A, 2009. 9788580551280. Disponível em: https://integrada.minhabiblioteca.com.br/#/books/9788580551280/. Acesso em: 30 mai. 2022.
 
 ## Cronograma
+
+Uma tentativa de detalhamento das aulas no tempo pode ser encontrada no plano da disciplina. Seguem abaixo as prováveis datas das três provas,
+
+- Prova 1: 07/07 (Turma 01) e 06/07 (Turma 02)
+- Prova 2: 11/08 (Turma 01) e 10/08 (Turma 02)
+- Prova 3: 22/09 (Turma 01) e 21/09 (Turma 02)
+
+Essas datas podem ser alteradas dependendo do andamento das aulas.
+
+## Aprender3
+
+A disciplina está numa fase de transição para este site. Entretanto, as listas de exercícios continuarão a ser disponibilizadas e realizadas pelos alunos no ambiente do Aprender3. Portanto, é imprescindível que todos os alunos inscritos na disciplina, independente da turma, se inscrevam no Aprender3.
+
+As senhas para inscrição serão disponibilizadas no primeiro dia de aula.
+
