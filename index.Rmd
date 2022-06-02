@@ -113,5 +113,5 @@ Essas datas podem ser alteradas dependendo do andamento das aulas.
 
 A disciplina está numa fase de transição para este site. Entretanto, as listas de exercícios continuarão a ser disponibilizadas e realizadas pelos alunos no ambiente do Aprender3. Portanto, é imprescindível que todos os alunos inscritos na disciplina, independente da turma, se inscrevam no Aprender3.
 
-As senhas para inscrição serão disponibilizadas no primeiro dia de aula.
+As senhas para inscrição já foram enviadas por email para os alunos matriculados na disciplina, mas serão disponibilizadas em sala no primeiro dia de aula.
 

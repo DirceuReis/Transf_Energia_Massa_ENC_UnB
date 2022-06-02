@@ -1,5 +1,8 @@
 name: "Transf_Energia_Massa_ENC_UnB"
 title: "Transferência de Energia e Massa"
+base_url: https://dirceureis.github.io/Transf_Energia_Massa_ENC_UnB/
+repository_url: https://github.com/DirceuReis/Transf_Energia_Massa_ENC_UnB
+creative_commons: CC BY
 description: |
   Disciplina dos cursos de Engenharia Civil e Engenharia Ambiental da Universidade de Brasília
 output_dir: "docs"
