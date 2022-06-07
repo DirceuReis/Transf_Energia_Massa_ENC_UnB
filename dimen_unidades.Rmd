@@ -20,3 +20,7 @@ Ao final deste tópico, o aluno deverá ser capaz de:
 Os alunos deverão ler pelo menos um dos textos elencados na seção Bibligrafia Sugerida na página inicial deste site. 
 
 Durante a leitura, procure entender os conceitos de grandeza, dimensão e unidade. Em seguida, procure elaborar uma lista de variáveis físicas que você já aprendeu no passado e tente identificar a dimensão dessas variáveis e as respectivas unidades no Sistema Internacional. 
+
+## Slides
+
+Os slides referentes às aulas de dimensão e unidades, bem como de propriedade dos fluidos, podem ser obtidas [aqui](slides_dimensao_propriedades.pdf).
