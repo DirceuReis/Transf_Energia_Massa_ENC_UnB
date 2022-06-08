@@ -75,9 +75,29 @@ $$
 
 #### Relação entre a tensão de cisalhamento e a taxa de deformação do fluido
 
+Estudos em laboratório mostraram que alguns fluidos apresentam um comportamento tal que a tensão de cisalhamento é proporcional à taxa de deformação do fluido,
+
+$$
+\tau \propto \frac{du}{dy}
+$$
+Fluidos que possuem esse comportamento são camados de fluidos newtonianos, e a constante de proporcionalidade nesses casos é chaam de viscosidade dinâmica, $\mu$, de forma que 
+
+$$
+\tau = \mu \frac{du}{dy}
+$$
+A Figura abaixo apesenta a relação entre a tensão de cisalhamento e a taxa de deformação do fluido para o ar, água, e petróleo. Pode-se notar que para se obter um dado valor fixo de taxa de deformação, a tensão de cisalhamneto necessária para deformar o petróleo é muito mais elevada do que para água e ar, o que indica que a viscidade diNãmica do petróleo é mais elevada do que as da água e do ar. 
+
+```{r tensao_vs_deformacao,echo=FALSE, fig.align = 'center', out.width = "50%", fig.cap = "Fonte: Çengel & Cimbala (2015). Mecânica dos Fluidos."}
+knitr::include_graphics("figures/taxa_deformacao_vs_tensao.jpg")
+```
 
 
-#### Fluidos newtonianos e não-newtonianos
+#### Fluidos newtonianos e não-newtoniano
+
+```{r newtoniano,echo=FALSE, fig.align = 'center', out.width = "50%", fig.cap = "Fonte: Çengel & Cimbala (2015). Mecânica dos Fluidos."}
+knitr::include_graphics("figures/fluidos_newtonianos.jpg")
+```
+
 
 #### Viscosímetro
 ### Coesão, adesão e tensão superficial
