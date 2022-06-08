@@ -50,16 +50,17 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  { color: #00769e; background-color: #f1f3f5; }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span { color: #00769e; } /* Normal */
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { } /* Attribute */
+code span.at { color: #657422; } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
-code span.cf { color: #007ba5; } /* ControlFlow */
+code span.cf { color: #00769e; } /* ControlFlow */
 code span.ch { color: #20794d; } /* Char */
 code span.cn { color: #8f5902; } /* Constant */
 code span.co { color: #5e5e5e; } /* Comment */
@@ -73,9 +74,9 @@ code span.fl { color: #ad0000; } /* Float */
 code span.fu { color: #4758ab; } /* Function */
 code span.im { } /* Import */
 code span.in { color: #5e5e5e; } /* Information */
-code span.kw { color: #007ba5; } /* Keyword */
+code span.kw { color: #00769e; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
-code span.ot { color: #007ba5; } /* Other */
+code span.ot { color: #00769e; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
 code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
@@ -1031,10 +1032,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     margin-top: 1.5em;
   }
 
-  .figure img {
-    width: 100%;
-  }
-
   .figure .caption {
     color: rgba(0, 0, 0, 0.6);
     font-size: 12px;
@@ -1864,6 +1861,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
+        if ($(this).children()[0].nodeName == "D-FOOTNOTE") {
+          var fn = $(this).children()[0]
+          $(this).html(fn.shadowRoot.querySelector("sup"))
+          $(this).id = fn.id
+          fn.remove()
+        }
         var refs = $(this).attr('data-cites').split(" ");
         var refHtml = refs.map(function(ref) {
           return "<p>" + $('#ref-' + ref).html() + "</p>";
@@ -1878,6 +1881,31 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
           placement: 'bottom-start'
         });
       });
+
+      // fix footnotes in tables (#411)
+      // replacing broken distill.pub feature
+      $('table d-footnote').each(function() {
+        // we replace internal showAtNode methode which is triggered when hovering a footnote
+        this.hoverBox.showAtNode = function(node) {
+          // ported from https://github.com/distillpub/template/pull/105/files
+          calcOffset = function(elem) {
+              let x = elem.offsetLeft;
+              let y = elem.offsetTop;
+              // Traverse upwards until an `absolute` element is found or `elem`
+              // becomes null.
+              while (elem = elem.offsetParent && elem.style.position != 'absolute') {
+                  x += elem.offsetLeft;
+                  y += elem.offsetTop;
+              }
+
+              return { left: x, top: y };
+          }
+          // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop
+          const bbox = node.getBoundingClientRect();
+          const offset = calcOffset(node);
+          this.show([offset.left + bbox.width, offset.top + bbox.height]);
+        }
+      })
 
       // clear polling timer
       clearInterval(tid);
@@ -1977,6 +2005,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // mark non-body figures created by knitr chunks as 100% width
     $('.layout-chunk').each(function(i, val) {
       var figures = $(this).find('img, .html-widget');
+      // ignore leaflet img layers (#106)
+      figures = figures.filter(':not(img[class*="leaflet"])')
       if ($(this).attr('data-layout') !== "l-body") {
         figures.css('width', '100%');
       } else {
@@ -1999,7 +2029,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // get rid of index.html references in header
     if (window.location.protocol !== "file:") {
       $('.distill-site-header a[href]').each(function(i,val) {
-        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+        $(this).attr('href', $(this).attr('href').replace(/^index[.]html/, "./"));
       });
     }
 
@@ -2153,7 +2183,20 @@ Parte 4
 <ul>
 <li><a href="#objetivos">Objetivos:</a></li>
 <li><a href="#leitura">Leitura</a></li>
-<li><a href="#vídeo-aula-sobre-viscosidade">Vídeo-aula sobre viscosidade</a></li>
+<li><a href="#assuntos-a-serem-tratados-em-aula">Assuntos a serem
+tratados em aula</a>
+<ul>
+<li><a href="#principais-diferenças-entre-fluido-e-sólido">Principais
+diferenças entre fluido e sólido</a></li>
+<li><a href="#propriedades-relacionadas-com-massa-e-volume">Propriedades
+relacionadas com massa e volume</a></li>
+<li><a href="#viscosidade">Viscosidade</a></li>
+<li><a href="#coesão-adesão-e-tensão-superficial">Coesão, adesão e
+tensão superficial</a></li>
+<li><a href="#capilaridade">Capilaridade</a></li>
+</ul></li>
+<li><a href="#vídeo-aula-sobre-viscosidade">Vídeo-aula sobre
+viscosidade</a></li>
 </ul>
 </nav>
 </div>
@@ -2161,17 +2204,122 @@ Parte 4
 <p>Ao final deste tópico, o aluno deverá ser capaz de:</p>
 <ul>
 <li>Entender as diferenças entre gases, líquidos e sólidos;</li>
-<li>Saber explicar as propriedades de um fluido, tais como massa específica, peso específico, densidade relativa, viscosidade dinâmica, tensão superficial, e tensão de vapor;</li>
-<li>Aplicar os conceitos de viscosidade e tensão superficial em situações práticas na engenharia;</li>
-<li>Identificar problemas práticos nas áreas de engenharia civil e ambiental relacionados com fluidos.</li>
+<li>Saber explicar as propriedades de um fluido, tais como massa
+específica, peso específico, densidade relativa, viscosidade dinâmica,
+tensão superficial, e tensão de vapor;</li>
+<li>Aplicar os conceitos de viscosidade e tensão superficial em
+situações práticas na engenharia;</li>
+<li>Identificar problemas práticos nas áreas de engenharia civil e
+ambiental relacionados com fluidos.</li>
 </ul>
 <h2 id="leitura">Leitura</h2>
-<p>Os alunos deverão ler pelo menos um dos textos elencados na seção Bibligrafia Sugerida na página inicial deste site.</p>
-<p>Em seguida, procure entender o que difere um sólido de um fluido. Reflita sobre essas diferenças. Quais são as principias características que levam um sólido a se comportar de maneira diferente de um fluido? E por que líquidos e gases, ambos fluidos, se comportam também de maneira diferente?</p>
-<p>Por último, leia sobre as diversas propriedades de um fluido, focando principalmente, mas não apenas, na viscosidade, tensão superficial, e tensão de vapor.</p>
+<p>Os alunos deverão ler pelo menos um dos textos elencados na seção
+Bibligrafia Sugerida na página inicial deste site.</p>
+<p>Em seguida, procure entender o que difere um sólido de um fluido.
+Reflita sobre essas diferenças. Quais são as principias características
+que levam um sólido a se comportar de maneira diferente de um fluido? E
+por que líquidos e gases, ambos fluidos, se comportam também de maneira
+diferente?</p>
+<p>Por último, leia sobre as diversas propriedades de um fluido, focando
+principalmente, mas não apenas, na viscosidade, tensão superficial, e
+tensão de vapor.</p>
+<h2 id="assuntos-a-serem-tratados-em-aula">Assuntos a serem tratados em
+aula</h2>
+<h3 id="principais-diferenças-entre-fluido-e-sólido">Principais
+diferenças entre fluido e sólido</h3>
+<h3 id="propriedades-relacionadas-com-massa-e-volume">Propriedades
+relacionadas com massa e volume</h3>
+<ul>
+<li>massa específica (<span class="math inline">\(\rho\)</span>)</li>
+<li>peso específico (<span class="math inline">\(\gamma\)</span>)</li>
+<li>densidade relativa ou gravidade específica</li>
+</ul>
+<h3 id="viscosidade">Viscosidade</h3>
+<h4
+id="relação-entre-tensão-de-cisalhamento-e-taxa-de-deformação-de-um-fluido">Relação
+entre tensão de cisalhamento e taxa de deformação de um fluido</h4>
+<p>A Figura abaixo apresenta uma situação em que um fluido está entre
+duas placas, uma na parte infeiror, que se mantém imóvel, e outra na
+parte superior, que sofre a ação de uma força e se movimento com
+velocidade <span class="math inline">\(V\)</span>.</p>
+<p>Devido à condição de não-escorregamento do fluido, as partículas do
+fluido em contato com a placa possuem velocidade zero relativa à placa.
+Isso significa que as partículas em contato com a placa inferior ficarão
+imóveis, enquanto as partículas de fluido localizadas junto à placa
+superior se movimentarão com velocidade <span
+class="math inline">\(V\)</span>.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:viscosidade"></span>
+<img src="figures/viscosidade.jpg" alt="Fonte: Çengel &amp; Cimbala (2015). Mecânica dos Fluidos." width="50%" />
+<p class="caption">
+Figure 1: Fonte: Çengel &amp; Cimbala (2015). Mecânica dos
+Fluidos.
+</p>
+</div>
+</div>
+<p>A condição de não-escorregamento do fluido resulta numa situação em
+que a velocidade das partículas fluidas na direção <span
+class="math inline">\(x\)</span>, denominada aqui de <span
+class="math inline">\(u\)</span>, varia na direção vertical, formando um
+perfil de velocidades, como mostrado no Figura. Assumindo que esse
+perfil de velocidades é linear, podemos dizer então que,</p>
+<p><span class="math display">\[u(y) = a*y+b\]</span></p>
+<p>em que <span class="math inline">\(a\)</span> e <span
+class="math inline">\(b\)</span> são parâmetros da equação que podem ser
+estimados. A estimativa de <span class="math inline">\(a\)</span> e
+<span class="math inline">\(b\)</span> é feita considerando as condições
+de contorno do problema, quais sejam, <span
+class="math inline">\(u(y=0)=0\)</span> e <span
+class="math inline">\(u(y=l)=V\)</span>, o que resulta em <span
+class="math inline">\(a=V/l\)</span> e <span
+class="math inline">\(b=0\)</span>, de forma que,</p>
+<p><span class="math display">\[u(y) = \frac{V}{l}*y\]</span> Antes da
+força <span class="math inline">\(F\)</span> ser aplicada à placa
+superior, podemos imaginar um conjunto de partículas fluidas alinhadas
+na vertical (ver Figura) junto ao ponto <span
+class="math inline">\(M\)</span>. Durante um intervalo de tempo
+infinitesimal <span class="math inline">\(dt\)</span> a partir do
+momento de ínício da aplicação da força <span
+class="math inline">\(F\)</span>, a placa superior, assim como as
+partíclas fluidas locaçizdas junto à ela, se deslocarão uma distância
+<span class="math inline">\(\da = V*dt\)</span>. Devido ao perfil de
+velocidades, observamos uma deformação do fluido, que pode ser
+representada pela variável <span class="math inline">\(d\beta\)</span>,
+como mostrado na Figura.</p>
+<p>A tangente do ângulo <span class="math inline">\(d\beta\)</span> é
+dada por,</p>
+<p><span
+class="math display">\[tan(d\beta)=\frac{da}{l}=\frac{V*dt}{l}\]</span>
+Sabemos que para ângulos pequenos, <span
+class="math inline">\(tan(\theta)\approx \theta\)</span>, de forma
+que</p>
+<p><span class="math display">\[\frac{d\beta}{dt}=\frac{V}{l}\]</span>
+em que <span class="math inline">\(d\beta/dt\)</span> é a taxa de
+deformação do fluido. Vale notar que <span
+class="math inline">\(V/l\)</span> é também o gradiente de velocaidades
+na direção <span class="math inline">\(y\)</span>,</p>
+<p><span class="math display">\[
+\frac{du(y)}{dy} = \frac{V}{l}
+\]</span> de forma que a taxa de deformação de fluido ao longo do tempo
+é igual ao gradiente de velocidade na direção perpendicular ao
+escoamento,</p>
+<p><span class="math display">\[
+\frac{d\beta}{dt}=\frac{du(y)}{dy}
+\]</span></p>
+<h4 id="conceito-de-viscosidade">Conceito de viscosidade</h4>
+<h4 id="fluidos-newtonianos-e-não-newtonianos">Fluidos newtonianos e
+não-newtonianos</h4>
+<h4 id="viscosímetro">Viscosímetro</h4>
+<h3 id="coesão-adesão-e-tensão-superficial">Coesão, adesão e tensão
+superficial</h3>
+<h3 id="capilaridade">Capilaridade</h3>
 <h2 id="vídeo-aula-sobre-viscosidade">Vídeo-aula sobre viscosidade</h2>
-<p><a href="https://web.microsoftstream.com/video/e8ae3e86-dead-44e8-9bf0-2e79f8874301">Este vídeo curto</a> apresenta a relação entre a viscosidade de um fluido e sua taxa de deformação.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<p><a
+href="https://web.microsoftstream.com/video/e8ae3e86-dead-44e8-9bf0-2e79f8874301">Este
+vídeo curto</a> apresenta a relação entre a viscosidade de um fluido e
+sua taxa de deformação.</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
@@ -2179,6 +2327,15 @@ Parte 4
 <div class="d-appendix">
 </div>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->

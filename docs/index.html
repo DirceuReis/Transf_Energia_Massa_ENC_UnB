@@ -50,16 +50,17 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  { color: #00769e; background-color: #f1f3f5; }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span { color: #00769e; } /* Normal */
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { } /* Attribute */
+code span.at { color: #657422; } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
-code span.cf { color: #007ba5; } /* ControlFlow */
+code span.cf { color: #00769e; } /* ControlFlow */
 code span.ch { color: #20794d; } /* Char */
 code span.cn { color: #8f5902; } /* Constant */
 code span.co { color: #5e5e5e; } /* Comment */
@@ -73,9 +74,9 @@ code span.fl { color: #ad0000; } /* Float */
 code span.fu { color: #4758ab; } /* Function */
 code span.im { } /* Import */
 code span.in { color: #5e5e5e; } /* Information */
-code span.kw { color: #007ba5; } /* Keyword */
+code span.kw { color: #00769e; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
-code span.ot { color: #007ba5; } /* Other */
+code span.ot { color: #00769e; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
 code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
@@ -1032,10 +1033,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     margin-top: 1.5em;
   }
 
-  .figure img {
-    width: 100%;
-  }
-
   .figure .caption {
     color: rgba(0, 0, 0, 0.6);
     font-size: 12px;
@@ -1865,6 +1862,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
+        if ($(this).children()[0].nodeName == "D-FOOTNOTE") {
+          var fn = $(this).children()[0]
+          $(this).html(fn.shadowRoot.querySelector("sup"))
+          $(this).id = fn.id
+          fn.remove()
+        }
         var refs = $(this).attr('data-cites').split(" ");
         var refHtml = refs.map(function(ref) {
           return "<p>" + $('#ref-' + ref).html() + "</p>";
@@ -1879,6 +1882,31 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
           placement: 'bottom-start'
         });
       });
+
+      // fix footnotes in tables (#411)
+      // replacing broken distill.pub feature
+      $('table d-footnote').each(function() {
+        // we replace internal showAtNode methode which is triggered when hovering a footnote
+        this.hoverBox.showAtNode = function(node) {
+          // ported from https://github.com/distillpub/template/pull/105/files
+          calcOffset = function(elem) {
+              let x = elem.offsetLeft;
+              let y = elem.offsetTop;
+              // Traverse upwards until an `absolute` element is found or `elem`
+              // becomes null.
+              while (elem = elem.offsetParent && elem.style.position != 'absolute') {
+                  x += elem.offsetLeft;
+                  y += elem.offsetTop;
+              }
+
+              return { left: x, top: y };
+          }
+          // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop
+          const bbox = node.getBoundingClientRect();
+          const offset = calcOffset(node);
+          this.show([offset.left + bbox.width, offset.top + bbox.height]);
+        }
+      })
 
       // clear polling timer
       clearInterval(tid);
@@ -1978,6 +2006,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // mark non-body figures created by knitr chunks as 100% width
     $('.layout-chunk').each(function(i, val) {
       var figures = $(this).find('img, .html-widget');
+      // ignore leaflet img layers (#106)
+      figures = figures.filter(':not(img[class*="leaflet"])')
       if ($(this).attr('data-layout') !== "l-body") {
         figures.css('width', '100%');
       } else {
@@ -2000,7 +2030,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // get rid of index.html references in header
     if (window.location.protocol !== "file:") {
       $('.distill-site-header a[href]').each(function(i,val) {
-        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+        $(this).attr('href', $(this).attr('href').replace(/^index[.]html/, "./"));
       });
     }
 
@@ -2143,11 +2173,15 @@ Parte 4
 <h1>Trasferência de Energia e Massa</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>Departamento de Engenharia Civil e Ambiental da Universidade de Brasíla (UnB)</p></p>
+<p><p>Departamento de Engenharia Civil e Ambiental da Universidade de
+Brasíla (UnB)</p></p>
 </div>
 
 <div class="d-byline">
-  Dirceu S. Reis Jr. <a href="https://github.com/DirceuReis" class="uri">https://github.com/DirceuReis</a> (Professor Universidade de Brasília (UnB))<a href="https://www.unb.br" class="uri">https://www.unb.br</a>
+  Dirceu S. Reis Jr. <a href="https://github.com/DirceuReis"
+class="uri">https://github.com/DirceuReis</a> (Professor Universidade de
+Brasília (UnB))<a href="https://www.unb.br"
+class="uri">https://www.unb.br</a>
   
 
 </div>
@@ -2168,66 +2202,135 @@ Parte 4
 </nav>
 </div>
 <h2 id="apresentação">Apresentação</h2>
-<p>A disciplina de Transferência de Energia e Massa (5 créditos), código 115762, é obrigatória para os cursos de Engenharia Civil e Engenharia Ambiental da Universidade de Brasília, sendo ofertada todo o semestre, sempre com duas turmas.</p>
+<p>A disciplina de Transferência de Energia e Massa (5 créditos), código
+115762, é obrigatória para os cursos de Engenharia Civil e Engenharia
+Ambiental da Universidade de Brasília, sendo ofertada todo o semestre,
+sempre com duas turmas.</p>
 <p>Os pré-requisitos para cursar a disciplina são:</p>
 <ul>
-<li><p>MAT-113051 Cálculo 3 e ENC-166014 Mecânica dos Sólidos 1 ou</p></li>
-<li><p>MAT-113051 Cálculo 3 e ENC 110302: Intro à Mecânica dos Sólidos</p></li>
+<li><p>MAT-113051 Cálculo 3 e ENC-166014 Mecânica dos Sólidos 1
+ou</p></li>
+<li><p>MAT-113051 Cálculo 3 e ENC 110302: Intro à Mecânica dos
+Sólidos</p></li>
 </ul>
-<p>As aulas acontecerão na sala FT/ENC/CT-43/15 nos horários apresentados abaixo,</p>
+<p>As aulas acontecerão na sala FT/ENC/CT-43/15 nos horários
+apresentados abaixo,</p>
 <ul>
-<li><p>Turma 1: segundas das 18h00 às 18h50 e terças e quintas das 16h00 às 17h50.</p></li>
-<li><p>Turma 2: segundas e quartas das 16h00 às 17h50 e terças das 18h00 às 18h50.</p></li>
+<li><p>Turma 1: segundas das 18h00 às 18h50 e terças e quintas das 16h00
+às 17h50.</p></li>
+<li><p>Turma 2: segundas e quartas das 16h00 às 17h50 e terças das 18h00
+às 18h50.</p></li>
 </ul>
 <h2 id="professor">Professor</h2>
 <p>Dirceu Silveira Reis Junior</p>
-<p>email: <a href="mailto:dirceu.reis@gmail.com" class="email">dirceu.reis@gmail.com</a> ou <a href="mailto:dirceureis@unb.br" class="email">dirceureis@unb.br</a></p>
+<p>email: <a href="mailto:dirceu.reis@gmail.com"
+class="email">dirceu.reis@gmail.com</a> ou <a
+href="mailto:dirceureis@unb.br" class="email">dirceureis@unb.br</a></p>
 <figure>
-<img src="foto_lago_menor.jpg" style="width:30.0%" alt="Dirceu S. Reis Jr. curtindo o lago Paranoá na pandemia" /><figcaption aria-hidden="true">Dirceu S. Reis Jr. curtindo o lago Paranoá na pandemia</figcaption>
+<img src="foto_lago_menor.jpg" style="width:30.0%"
+alt="Dirceu S. Reis Jr. curtindo o lago Paranoá na pandemia" />
+<figcaption aria-hidden="true">Dirceu S. Reis Jr. curtindo o lago
+Paranoá na pandemia</figcaption>
 </figure>
 <h2 id="plano-da-disciplina">Plano da disciplina</h2>
-<p>Os planos da disciplina (pdf), um para cada turma, com todos os detalhes que costumam ser apresentados, e que não estão listados aqui neste site, podem ser obtidos pelos links abaixo:</p>
+<p>Os planos da disciplina (pdf), um para cada turma, com todos os
+detalhes que costumam ser apresentados, e que não estão listados aqui
+neste site, podem ser obtidos pelos links abaixo:</p>
 <ul>
-<li><a href="Apresentacao1-2022_1_Transf_Energia_Mass_Turma_A.pdf">Turma 01</a></li>
-<li><a href="Apresentacao1-2022_1_Transf_Energia_Mass_Turma_B.pdf">Turma 02</a></li>
-<li>ou diretamente no espaço reservado para a disciplina no Aprender3.</li>
+<li><a href="Apresentacao1-2022_1_Transf_Energia_Mass_Turma_A.pdf">Turma
+01</a></li>
+<li><a href="Apresentacao1-2022_1_Transf_Energia_Mass_Turma_B.pdf">Turma
+02</a></li>
+<li>ou diretamente no espaço reservado para a disciplina no
+Aprender3.</li>
 </ul>
 <h2 id="avaliação">Avaliação</h2>
-<p>A avaliação do aluno será baseada nas notas de 3 provas, a serem realizadas em sala de aula, e de algumas listas de exercícios que serão distribuídas ao longo do semestre. A nota final do aluno será calcalada da seguinte forma,</p>
+<p>A avaliação do aluno será baseada nas notas de 3 provas, a serem
+realizadas em sala de aula, e de algumas listas de exercícios que serão
+distribuídas ao longo do semestre. A nota final do aluno será calcalada
+da seguinte forma,</p>
 <p><span class="math display">\[
 NF = 0.4*MLE + 0.6*MP
-\]</span> em que <span class="math inline">\(NF\)</span> é a nota final do aluno, <span class="math inline">\(MLE\)</span> é a média aritmética das notas obtidas nas listas de exercícios, e <span class="math inline">\(MP\)</span> é a média ponderadas das 3 provas, dada pela equação abaixo,</p>
+\]</span> em que <span class="math inline">\(NF\)</span> é a nota final
+do aluno, <span class="math inline">\(MLE\)</span> é a média aritmética
+das notas obtidas nas listas de exercícios, e <span
+class="math inline">\(MP\)</span> é a média ponderadas das 3 provas,
+dada pela equação abaixo,</p>
 <p><span class="math display">\[
 MP = 0.3*P_1 + 0.35*P_2 + 0.35*P_3
-\]</span> em que <span class="math inline">\(P_1, P_2, \text{e}\; P_3\)</span> são a primeira, segunda e terceira provas, respectivamente.</p>
+\]</span> em que <span class="math inline">\(P_1, P_2, \text{e}\;
+P_3\)</span> são a primeira, segunda e terceira provas,
+respectivamente.</p>
 <h2 id="bibliografia">Bibliografia</h2>
-<h3 id="livros-de-mecânica-dos-fluidos">Livros de Mecânica dos Fluidos</h3>
-<p>Todos os livros abaixo podem ser encontrados na BCE/UnB em sua versão digital. Basta seguir o link nas referências. Todos estes livros são muito bons. Recomendo a leitura dos capítulos de qualquer um destes livros à medida que formos avançando no tempo.</p>
+<h3 id="livros-de-mecânica-dos-fluidos">Livros de Mecânica dos
+Fluidos</h3>
+<p>Todos os livros abaixo podem ser encontrados na BCE/UnB em sua versão
+digital. Basta seguir o link nas referências. Todos estes livros são
+muito bons. Recomendo a leitura dos capítulos de qualquer um destes
+livros à medida que formos avançando no tempo.</p>
 <ul>
-<li><p>ÇENGEL, Yunus A.; CIMBALA, John M. Mecânica dos fluidos. [Digite o Local da Editora]: Grupo A, 2015. 9788580554915. Disponível em: <a href="https://integrada.minhabiblioteca.com.br/#/books/9788580554915/" class="uri">https://integrada.minhabiblioteca.com.br/#/books/9788580554915/</a>. Acesso em: 30 mai. 2022.</p></li>
-<li><p>POTTER, Merle C.; WIGGERT, David C. Mecânica dos Fluidos. [Digite o Local da Editora]: Grupo A, 2018. 9788582604540. Disponível em: <a href="https://integrada.minhabiblioteca.com.br/#/books/9788582604540/" class="uri">https://integrada.minhabiblioteca.com.br/#/books/9788582604540/</a>. Acesso em: 30 mai. 2022.</p></li>
-<li><p>WHITE, Frank M. Mecânica dos Fluidos. [Digite o Local da Editora]: Grupo A, 2018. 9788580556070. Disponível em: <a href="https://integrada.minhabiblioteca.com.br/#/books/9788580556070/" class="uri">https://integrada.minhabiblioteca.com.br/#/books/9788580556070/</a>. Acesso em: 30 mai. 2022.</p></li>
-<li><p>FOX, Robert W.; MCDONALD, Alan T.; PRITCHARD, Philip J.; MICHTELL, John W. Introdução à Mecânica dos Fluidos, 9ª edição. [Digite o Local da Editora]: Grupo GEN, 2018. 9788521635000. Disponível em: <a href="https://integrada.minhabiblioteca.com.br/#/books/9788521635000/" class="uri">https://integrada.minhabiblioteca.com.br/#/books/9788521635000/</a>. Acesso em: 30 mai. 2022.</p></li>
-<li><p>MUNSON, Bruce R. Fundamentos da mecânica dos fluídos. [Digite o Local da Editora]: Editora Blucher, 2004. 9788521215493. Disponível em: <a href="https://integrada.minhabiblioteca.com.br/#/books/9788521215493/" class="uri">https://integrada.minhabiblioteca.com.br/#/books/9788521215493/</a>. Acesso em: 30 mai. 2022.</p></li>
+<li><p>ÇENGEL, Yunus A.; CIMBALA, John M. Mecânica dos fluidos. [Digite
+o Local da Editora]: Grupo A, 2015. 9788580554915. Disponível em: <a
+href="https://integrada.minhabiblioteca.com.br/#/books/9788580554915/"
+class="uri">https://integrada.minhabiblioteca.com.br/#/books/9788580554915/</a>.
+Acesso em: 30 mai. 2022.</p></li>
+<li><p>POTTER, Merle C.; WIGGERT, David C. Mecânica dos Fluidos. [Digite
+o Local da Editora]: Grupo A, 2018. 9788582604540. Disponível em: <a
+href="https://integrada.minhabiblioteca.com.br/#/books/9788582604540/"
+class="uri">https://integrada.minhabiblioteca.com.br/#/books/9788582604540/</a>.
+Acesso em: 30 mai. 2022.</p></li>
+<li><p>WHITE, Frank M. Mecânica dos Fluidos. [Digite o Local da
+Editora]: Grupo A, 2018. 9788580556070. Disponível em: <a
+href="https://integrada.minhabiblioteca.com.br/#/books/9788580556070/"
+class="uri">https://integrada.minhabiblioteca.com.br/#/books/9788580556070/</a>.
+Acesso em: 30 mai. 2022.</p></li>
+<li><p>FOX, Robert W.; MCDONALD, Alan T.; PRITCHARD, Philip J.;
+MICHTELL, John W. Introdução à Mecânica dos Fluidos, 9ª edição. [Digite
+o Local da Editora]: Grupo GEN, 2018. 9788521635000. Disponível em: <a
+href="https://integrada.minhabiblioteca.com.br/#/books/9788521635000/"
+class="uri">https://integrada.minhabiblioteca.com.br/#/books/9788521635000/</a>.
+Acesso em: 30 mai. 2022.</p></li>
+<li><p>MUNSON, Bruce R. Fundamentos da mecânica dos fluídos. [Digite o
+Local da Editora]: Editora Blucher, 2004. 9788521215493. Disponível em:
+<a
+href="https://integrada.minhabiblioteca.com.br/#/books/9788521215493/"
+class="uri">https://integrada.minhabiblioteca.com.br/#/books/9788521215493/</a>.
+Acesso em: 30 mai. 2022.</p></li>
 </ul>
 <!-- POST, Scott. Mecânica dos Fluidos Aplicada e Computacional. [Digite o Local da Editora]: Grupo GEN, 2013. 9788521635263. Disponível em: https://integrada.minhabiblioteca.com.br/#/books/9788521635263/. Acesso em: 30 mai. 2022. -->
 <!-- ELGER, Donald F. Mecânica dos Fluidos para Engenharia, 11ª edição. [Digite o Local da Editora]: Grupo GEN, #2019. 9788521636168. Disponível em: https://integrada.minhabiblioteca.com.br/#/books/9788521636168/. Acesso em: 30 mai. 2022.-->
-<h3 id="livros-de-transferência-de-calor-e-massa">Livros de Transferência de Calor e Massa</h3>
+<h3 id="livros-de-transferência-de-calor-e-massa">Livros de
+Transferência de Calor e Massa</h3>
 <ul>
-<li>ÇENGEL, Yunus A.; GHAJAR, Afshin J. Transferência de calor e massa: uma abordagem prática. [Digite o Local da Editora]: Grupo A, 2009. 9788580551280. Disponível em: <a href="https://integrada.minhabiblioteca.com.br/#/books/9788580551280/" class="uri">https://integrada.minhabiblioteca.com.br/#/books/9788580551280/</a>. Acesso em: 30 mai. 2022.</li>
+<li>ÇENGEL, Yunus A.; GHAJAR, Afshin J. Transferência de calor e massa:
+uma abordagem prática. [Digite o Local da Editora]: Grupo A, 2009.
+9788580551280. Disponível em: <a
+href="https://integrada.minhabiblioteca.com.br/#/books/9788580551280/"
+class="uri">https://integrada.minhabiblioteca.com.br/#/books/9788580551280/</a>.
+Acesso em: 30 mai. 2022.</li>
 </ul>
 <h2 id="cronograma">Cronograma</h2>
-<p>Uma tentativa de detalhamento das aulas no tempo pode ser encontrada no plano da disciplina. Seguem abaixo as prováveis datas das três provas,</p>
+<p>Uma tentativa de detalhamento das aulas no tempo pode ser encontrada
+no plano da disciplina. Seguem abaixo as prováveis datas das três
+provas,</p>
 <ul>
 <li>Prova 1: 07/07 (Turma 01) e 06/07 (Turma 02)</li>
 <li>Prova 2: 11/08 (Turma 01) e 10/08 (Turma 02)</li>
 <li>Prova 3: 22/09 (Turma 01) e 21/09 (Turma 02)</li>
 </ul>
-<p>Essas datas podem ser alteradas dependendo do andamento das aulas.</p>
+<p>Essas datas podem ser alteradas dependendo do andamento das
+aulas.</p>
 <h2 id="aprender3">Aprender3</h2>
-<p>A disciplina está numa fase de transição para este site. Entretanto, as listas de exercícios continuarão a ser disponibilizadas e realizadas pelos alunos no ambiente do Aprender3. Portanto, é imprescindível que todos os alunos inscritos na disciplina, independente da turma, se inscrevam no Aprender3.</p>
-<p>As senhas para inscrição já foram enviadas por email para os alunos matriculados na disciplina, mas serão disponibilizadas em sala no primeiro dia de aula.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<p>A disciplina está numa fase de transição para este site. Entretanto,
+as listas de exercícios continuarão a ser disponibilizadas e realizadas
+pelos alunos no ambiente do Aprender3. Portanto, é imprescindível que
+todos os alunos inscritos na disciplina, independente da turma, se
+inscrevam no Aprender3.</p>
+<p>As senhas para inscrição já foram enviadas por email para os alunos
+matriculados na disciplina, mas serão disponibilizadas em sala no
+primeiro dia de aula.</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
