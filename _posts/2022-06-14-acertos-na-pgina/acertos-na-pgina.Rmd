@@ -1,0 +1,20 @@
+---
+title: "Acertos na página e lembretes"
+description: |
+  
+author:
+  - name: Dirceu S. Reis Jr.
+    url: {}
+date: 2022-06-14
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+Alguns alunos haviam reparado que o link para obter os slides usados nas primeiras aulas não estava funcionando. Esse problema já foi resolvido.
+
+Aproveito para lembrar que é necessário se inscrever no Aprender3 para que seja possível fazer as listas de exercícios. A primeira lista deve entrar no ar na próxima segunda-feira.
+
+Um abraço,
+
+Dirceu
