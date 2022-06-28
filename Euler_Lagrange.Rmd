@@ -1,0 +1,28 @@
+---
+title: "Descrição do movimento de um fluido"
+description: Descrições euleriana e lagrangeana
+output:
+  distill::distill_article:
+    toc: true
+    toc_depth: 2
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+```
+
+## Objetivos:
+
+Ao final deste tópico, o aluno deverá ser capaz de:
+
+- Explicar a diferença entre as descrições Euleriana e Lagrangeana de um fluido em movimento;
+- Empregar o conceito de derivada material da disciplina de Cálculo Diferencial e Integral para obter a equação que mostra como uma propriedade qualquer (e.g. pressão, velocidade etc) varia à medida que uma partícula fluida escoa ao longo do tempo;
+- Determinar o campo de aceleração de uma partícula fluida à partir do campo de velocidades.
+
+## Leitura
+
+Os alunos deverão ler pelo menos um dos textos sugeridos na bibliografia do curso.
+
+## Figuras para aula
+
+
