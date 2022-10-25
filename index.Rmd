@@ -57,8 +57,8 @@ email: dirceu.reis@gmail.com ou dirceureis@unb.br
 
 Os planos da disciplina (pdf), um para cada turma, com todos os detalhes que costumam ser apresentados, e que não estão listados aqui neste site, podem ser obtidos pelos links abaixo:
 
-- [Turma 01](Apresentacao1-2022_1_Transf_Energia_Mass_Turma_A.pdf)
-- [Turma 02](Apresentacao1-2022_1_Transf_Energia_Mass_Turma_B.pdf)
+- [Turma 01](Apresentacao1-2022_2_Transf_Energia_Mass_Turma_A.pdf)
+- [Turma 02](Apresentacao1-2022_2_Transf_Energia_Mass_Turma_B.pdf)
 - ou diretamente no espaço reservado para a disciplina no Aprender3.
 
 ## Avaliação
@@ -66,12 +66,12 @@ Os planos da disciplina (pdf), um para cada turma, com todos os detalhes que cos
 A avaliação do aluno será baseada nas notas de 3 provas, a serem realizadas em sala de aula, e de algumas listas de exercícios que serão distribuídas ao longo do semestre. A nota final do aluno será calcalada da seguinte forma,
 
 $$
-NF = 0.4*MLE + 0.6*MP
+NF = 0.25*MLE + 0.75*MP
 $$
 em que $NF$ é a nota final do aluno, $MLE$ é a média aritmética das notas obtidas nas listas de exercícios, e $MP$ é a média ponderadas das 3 provas, dada pela equação abaixo,
 
 $$
-MP = 0.3*P_1 + 0.35*P_2 + 0.35*P_3
+MP = (P_1 + P_2 + P_3)/3
 $$
 em que $P_1, P_2, \text{e}\; P_3$ são a primeira, segunda e terceira provas, respectivamente.
 
