@@ -63,7 +63,7 @@ Os planos da disciplina (pdf), um para cada turma, com todos os detalhes que cos
 
 ## Avaliação
 
-A avaliação do aluno será baseada nas notas de 3 provas, a serem realizadas em sala de aula, e de algumas listas de exercícios que serão distribuídas ao longo do semestre. A nota final do aluno será calcalada da seguinte forma,
+A avaliação do aluno será baseada nas notas de 3 provas, a serem realizadas em sala de aula, e de algumas listas de exercícios que serão distribuídas ao longo do semestre. A nota final do aluno será calculada da seguinte forma,
 
 $$
 NF = 0.25*MLE + 0.75*MP
@@ -103,9 +103,9 @@ Todos os livros abaixo podem ser encontrados na BCE/UnB em sua versão digital. 
 
 Uma tentativa de detalhamento das aulas no tempo pode ser encontrada no plano da disciplina. Seguem abaixo as prováveis datas das três provas,
 
-- Prova 1: 07/07 (Turma 01) e 06/07 (Turma 02)
-- Prova 2: 11/08 (Turma 01) e 10/08 (Turma 02)
-- Prova 3: 22/09 (Turma 01) e 21/09 (Turma 02)
+- Prova 1: 01/12 (Turma 01) e 28/11 (Turma 02)
+- Prova 2: 12/01 (Turma 01) e 11/01 (Turma 02)
+- Prova 3: 16/02 (Turma 01) e 15/02 (Turma 02)
 
 Essas datas podem ser alteradas dependendo do andamento das aulas.
 
