@@ -40,9 +40,9 @@ Os pré-requisitos para cursar a disciplina são:
 
 As aulas acontecerão na sala FT/ENC/CT-43/15 nos horários apresentados abaixo,
 
-- Turma 1: segundas das 18h00 às 18h50 e terças e quintas das 16h00 às 17h50.
+- Turma 2: segundas das 18h00 às 18h50 e terças e quintas das 16h00 às 17h50.
 
-- Turma 2: segundas e quartas das 16h00 às 17h50 e terças das 18h00 às 18h50.
+- Turma 1: segundas e quartas das 16h00 às 17h50 e terças das 18h00 às 18h50.
 
 
 ## Professor
@@ -57,8 +57,8 @@ email: dirceu.reis@gmail.com ou dirceureis@unb.br
 
 Os planos da disciplina (pdf), um para cada turma, com todos os detalhes que costumam ser apresentados, e que não estão listados aqui neste site, podem ser obtidos pelos links abaixo:
 
-- [Turma 01](Apresentacao1-2022_2_Transf_Energia_Mass_Turma_A.pdf)
-- [Turma 02](Apresentacao1-2022_2_Transf_Energia_Mass_Turma_B.pdf)
+- [Turma 01](Apresentacao1-2023_1_Transf_Energia_Mass_Turma_01.pdf)
+- [Turma 02](Apresentacao1-2023_1_Transf_Energia_Mass_Turma_02.pdf)
 - ou diretamente no espaço reservado para a disciplina no Aprender3.
 
 ## Avaliação
