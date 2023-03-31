@@ -1,4 +1,0 @@
----
-title: "Transferência de Energia e Massa (UnB)"
-listing: posts
----
